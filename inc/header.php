@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Website Description -->
-    <meta name="description" content="Blue Chip: Corporate Multi Purpose Business Template" />
-    <meta name="author" content="Blue Chip" />
+    <meta name="description" content="Blog Website" />
+    <meta name="author" content="Golam Rabbani Mithu" />
 
     <!--  Favicons / Title Bar Icon  -->
     <link rel="shortcut icon" href="assets/images/favicon/favicon.png" />
@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon/favicon.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon/favicon.png" />
 
-    <title>Blog </title>
+    <title>BLOG </title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
@@ -55,8 +55,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.php">Navbar</a>
+                    <nav class="navbar  navbar-expand-lg navbar-light">
+                       
+                        <a class="navbar-brand logo-title" href="index.php">PROTHOM ALO</a>
+                        
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -86,7 +88,7 @@
                                 <?php }
                                 else { ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#login">Login</a>
+                                        <a class="nav-link" href="login.php">Login</a>
                                     </li>
                                 <?php }
                               ?>
@@ -100,3 +102,6 @@
         </div>        
     </header>
     <!-- ::::::::::: Header Section End ::::::::: -->
+
+    
+

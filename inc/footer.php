@@ -8,9 +8,9 @@
                     <!-- Footer Widget One Start-->
                     <div class="col-md-3">
                         <div class="widget-title">
-                            <h4><span>Blue</span> Chip</h4>
+                            <h4><span>Prothom</span> Alo</h4>
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard Lorem Ipsum has been the</p>
+                       <p>Journalism without fear or favour</p>
                         <!-- Social Media -->
                         <div class="widget-title">
                             <h4><span>Social</span> Media</h4>
@@ -53,7 +53,6 @@
                                 <li><a href="">Pages</a></li>
                                 <li><a href="">FAQ</a></li>
                                 <li><a href="">Terms of Use</a></li>
-                                <li><a href="">Privacy Policy</a></li>
                                 <li><a href="">Contact Us</a></li>
                             </ul>
                         </div>
@@ -68,20 +67,18 @@
                         <div class="contact-with-us">
                             <ul>
                                 <li>
-                                    <a><i class="fa fa-home"></i>7/H, Banani, Dhaka-1213</a>
+                                    <a><i class="fa fa-home"></i> Mirpur, Dhaka-1216</a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-envelope-o"></i>example@yourdomain.com</a>
+                                    <a><i class="fa fa-envelope-o"></i>golamrabbani@gmail.com</a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-fax"></i>+880 123 456 789</a>
+                                    <a><i class="fa fa-fax"></i>+880 123 000 000</a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-phone"></i>+880 123 456 789</a>
+                                    <a><i class="fa fa-phone"></i>+880 190 784 0170</a>
                                 </li>
-                                <li>
-                                    <a><i class="fa fa-clock-o"></i>9.00 am - 5.00 pm</a>
-                                </li>
+                            
                             </ul>
                         </div>
                     </div>
@@ -92,7 +89,7 @@
                         <div class="widget-title">
                             <h4><span>Subscribe</span> Here</h4>
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                       <p>Comments will be published after moderation.</p>
                         <!-- Subscribe From Start -->
                         <form action="" method="">
                             <div class="form-group ">
@@ -120,7 +117,7 @@
                 <div class="row">
                     <!-- Copyright Left Content -->
                     <div class="col-md-6">
-                        <p><a href="">Theme Express</a> © 2018 All rights reserved. Terms of use and Privacy Policy</p>
+                        <p><a href="">Prothom Alo</a> © 2024 All rights reserved. Terms of use and Privacy Policy</p>
                     </div>
 
                     <!-- Copyright Right Footer Menu Start -->
