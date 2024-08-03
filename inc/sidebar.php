@@ -254,7 +254,7 @@
 
                     <!-- Login card -->
                     <div class="widget" id="login">
-                        <h4>Login (Admin Dashboard) </h4>
+                        <h4>Login (Admin Dashboard)</h4>
                         <div class="title-border"></div>
                         <form action="admin/dashboard.php" method="POST">
                                         <div class="form-group">
@@ -272,4 +272,5 @@
                     </div>
 
                 </div>
+                
                 <!-- Right Sidebar End -->
