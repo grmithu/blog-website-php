@@ -8,56 +8,54 @@
                         
                         <!-- Sidebar Latest News Slider Start -->
                         <div class="sidebar-latest-news owl-carousel owl-theme">
-                            <!-- First Latest News Start -->
-                            <div class="item">
-                                <div class="latest-news">
-                                    <!-- Latest News Slider Image -->
-                                    <div class="latest-news-image">
-                                        <a href="#">
-                                            <img src="assets/images/blog/test.jpg">
-                                        </a>
+                           
+
+                        <?php 
+
+                            $sql = "SELECT * FROM post ORDER BY id DESC LIMIT 3";
+                            $latest_post = mysqli_query($db, $sql);
+
+                            while($row = mysqli_fetch_assoc($latest_post)){
+                                $id             = $row['id'];
+                                $title          = $row['title'];
+                                $description    = $row['description'];
+                                $image          = $row['image'];
+                                $category_id    = $row['category_id'];
+                                $author_id      = $row['author_id'];
+                                $status         = $row['status'];
+                                $tags           = $row['tags'];
+                                $post_date      = $row['post_date'];
+
+                                ?>
+
+
+                                <!-- First Latest News Start -->
+                                    <div class="item">
+                                        <div class="latest-news">
+                                            <!-- Latest News Slider Image -->
+                                            <div class="latest-news-image">
+                                                <a href="#">
+                                                    <img src="admin/img/post/<?php echo $image; ?>">
+                                                </a>
+                                            </div>
+                                            <!-- Latest News Slider Heading -->
+                                            <h5><?php echo $title; ?></h5>
+                                            <!-- Latest News Slider Paragraph -->
+                                            <p><?php echo substr($description, 0, 75); ?></p>
+                                        </div>
                                     </div>
-                                    <!-- Latest News Slider Heading -->
-                                    <h5>CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD.</h5>
-                                    <!-- Latest News Slider Paragraph -->
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                </div>
-                            </div>
-                            <!-- First Latest News End -->
+                                <!-- First Latest News End -->    
+
+
+                                <?php 
+
+                            }
+
+                        ?>
+                       
                             
-                            <!-- Second Latest News Start -->
-                            <div class="item">
-                                <div class="latest-news">
-                                    <!-- Latest News Slider Image -->
-                                    <div class="latest-news-image">
-                                        <a href="#">
-                                            <img src="assets/images/blog/test.jpg">
-                                        </a>
-                                    </div>
-                                    <!-- Latest News Slider Heading -->
-                                    <h5>CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD.</h5>
-                                    <!-- Latest News Slider Paragraph -->
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                </div>
-                            </div>
-                            <!-- Second Latest News End -->
-                            
-                            <!-- Third Latest News Start -->
-                            <div class="item">
-                                <div class="latest-news">
-                                    <!-- Latest News Slider Image -->
-                                    <div class="latest-news-image">
-                                        <a href="#">
-                                            <img src="assets/images/blog/test.jpg">
-                                        </a>
-                                    </div>
-                                    <!-- Latest News Slider Heading -->
-                                    <h5>CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD.</h5>
-                                    <!-- Latest News Slider Paragraph -->
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                </div>
-                            </div>
-                            <!-- Third Latest News End -->
+
+
                         </div>
                         <!-- Sidebar Latest News Slider End -->
                     </div>
@@ -81,89 +79,60 @@
                     </div>
                     <!-- Search Bar End -->
 
+
                     <!-- Recent Post -->
                     <div class="widget">
                         <h4>Recent Posts</h4>
                         <div class="title-border"></div>
                         <div class="recent-post">
-                            <!-- Recent Post Item Content Start -->
-                            <div class="recent-post-item">
-                                <div class="row">
-                                    <!-- Item Image -->
-                                    <div class="col-md-4">
-                                        <img src="assets/images/corporate-team/team-1.jpg">
-                                    </div>
-                                    <!-- Item Tite -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>Corporate World is Here with Technology</h5>
-                                        <ul>
-                                            <li><i class="fa fa-clock-o"></i>Dec 15, 2018</li>
-                                            <li><i class="fa fa-comment-o"></i>15</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item Content End -->
 
-                            <!-- Recent Post Item Content Start -->
-                            <div class="recent-post-item">
-                                <div class="row">
-                                    <!-- Item Image -->
-                                    <div class="col-md-4">
-                                        <img src="assets/images/corporate-team/team-1.jpg">
-                                    </div>
-                                    <!-- Item Tite -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>Corporate World is Here with Technology</h5>
-                                        <ul>
-                                            <li><i class="fa fa-clock-o"></i>Dec 15, 2018</li>
-                                            <li><i class="fa fa-comment-o"></i>15</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item Content End -->
+                        <?php
+                            $sql = "SELECT * FROM post LIMIT 3 ";
+                            $result = mysqli_query($db, $sql);
 
-                            <!-- Recent Post Item Content Start -->
-                            <div class="recent-post-item">
-                                <div class="row">
-                                    <!-- Item Image -->
-                                    <div class="col-md-4">
-                                        <img src="assets/images/corporate-team/team-1.jpg">
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $id             = $row['id'];
+                                $title          = $row['title'];
+                                $description    = $row['description'];
+                                $image          = $row['image'];
+                                $category_id    = $row['category_id'];
+                                $author_id      = $row['author_id'];
+                                $status         = $row['status'];
+                                $tags           = $row['tags'];
+                                $post_date      = $row['post_date'];
+                                
+                                ?>
+                                
+                                    <!-- Recent Post Item Content Start -->
+                                    <div class="recent-post-item">
+                                        <div class="row">
+                                            <!-- Item Image -->
+                                            <div class="col-md-4">
+                                                <img src="admin/img/post/<?php echo $image; ?>">
+                                            </div>
+                                            <!-- Item Tite -->
+                                            <div class="col-md-8 no-padding">
+                                                <h5><?php echo $title; ?></h5>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o"></i><?php echo $post_date; ?></li>
+                                                    <li><i class="fa fa-comment-o"></i>7</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- Item Tite -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>Corporate World is Here with Technology</h5>
-                                        <ul>
-                                            <li><i class="fa fa-clock-o"></i>Dec 15, 2018</li>
-                                            <li><i class="fa fa-comment-o"></i>15</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item Content End -->
+                                    <!-- Recent Post Item Content End -->
 
-                            <!-- Recent Post Item Content Start -->
-                            <div class="recent-post-item">
-                                <div class="row">
-                                    <!-- Item Image -->
-                                    <div class="col-md-4">
-                                        <img src="assets/images/corporate-team/team-1.jpg">
-                                    </div>
-                                    <!-- Item Tite -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>Corporate World is Here with Technology</h5>
-                                        <ul>
-                                            <li><i class="fa fa-clock-o"></i>Dec 15, 2018</li>
-                                            <li><i class="fa fa-comment-o"></i>15</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item Content End -->
+                                <?php
+
+                            }
+
+                        ?>
+
+                        
 
                         </div>
                     </div>
+
 
                     <!-- All Category -->
                     <div class="widget">
@@ -172,40 +141,46 @@
                         <!-- Blog Category Start -->
                         <div class="blog-categories">
                             <ul>
-                                <!-- Category Item -->
-                                <li>
-                                    <i class="fa fa-check"></i>
-                                    Information Technology 
-                                    <span>[22]</span>
-                                </li>
-                                <!-- Category Item -->
-                                <li>
-                                    <i class="fa fa-check"></i>
-                                    Corporate News 
-                                    <span>[20]</span>
-                                </li>
-                                <!-- Category Item -->
-                                <li>
-                                    <i class="fa fa-check"></i>
-                                    Web Design and Development 
-                                    <span>[35]</span>
-                                </li>
-                                <!-- Category Item -->
-                                <li>
-                                    <i class="fa fa-check"></i>
-                                    Social Media Marketing 
-                                    <span>[29]</span>
-                                </li>
-                                <!-- Category Item -->
-                                <li>
-                                    <i class="fa fa-check"></i>
-                                    Search Engine Optimization 
-                                    <span>[27]</span>
-                                </li>
+
+                                <?php 
+                                    $sql = "SELECT * FROM category";
+                                    $all_cat = mysqli_query($db, $sql);
+        
+                                    while ($row = mysqli_fetch_assoc($all_cat)){
+                                        $cat_id     = $row['cat_id'];
+                                        $cat_name   = $row['cat_name'];         
+                                        $cat_desc   = $row['cat_desc'];         
+                                        $cat_status   = $row['cat_status'];         
+                                    
+
+                                        $count=0;
+                                        $query = "SELECT * FROM post WHERE category_id = $cat_id";    
+                                        $count_post = mysqli_query($db, $query);    
+
+                                        while($row = mysqli_fetch_assoc($count_post)){
+                                            $count++;
+                                        }
+
+                                        ?>
+                                        
+                                         <!-- Category Item -->
+                                        <li>
+                                            <i class="fa fa-check"></i>
+                                            <?php echo $cat_name ?>
+                                            <span>[<?php echo $count; ?>]</span>
+                                        </li>
+
+                                        <?php    
+                                    }
+                                ?>
+
+                               
+                               
                             </ul>
                         </div>
                         <!-- Blog Category End -->
                     </div>
+
 
                     <!-- Recent Comments -->
                     <div class="widget">
@@ -222,11 +197,11 @@
                                     </div>
                                     <!-- Comments Content -->
                                     <div class="col-md-8 no-padding">
-                                        <h5>admin on blog posts</h5>
+                                        <h5>admin on blog posts (pending task)</h5>
                                         <!-- Comments Date -->
                                         <ul>
                                             <li>
-                                                <i class="fa fa-clock-o"></i>Dec 15, 2018
+                                                <i class="fa fa-clock-o"></i>July 4, 2024
                                             </li>
                                         </ul>
                                     </div>
@@ -234,50 +209,10 @@
                             </div>
                             <!-- Recent Comments Item End -->
 
-                            <!-- Recent Comments Item Start -->
-                            <div class="recent-comments-item">
-                                <div class="row">
-                                    <!-- Comments Thumbnails -->
-                                    <div class="col-md-4">
-                                        <i class="fa fa-comments-o"></i>
-                                    </div>
-                                    <!-- Comments Content -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>admin on blog posts</h5>
-                                        <!-- Comments Date -->
-                                        <ul>
-                                            <li>
-                                                <i class="fa fa-clock-o"></i>Dec 15, 2018
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Comments Item End -->
-
-                            <!-- Recent Comments Item Start -->
-                            <div class="recent-comments-item">
-                                <div class="row">
-                                    <!-- Comments Thumbnails -->
-                                    <div class="col-md-4">
-                                        <i class="fa fa-comments-o"></i>
-                                    </div>
-                                    <!-- Comments Content -->
-                                    <div class="col-md-8 no-padding">
-                                        <h5>admin on blog posts</h5>
-                                        <!-- Comments Date -->
-                                        <ul>
-                                            <li>
-                                                <i class="fa fa-clock-o"></i>Dec 15, 2018
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Comments Item End -->
-
+                            
                         </div>
                     </div>
+
 
                     <!-- Meta Tag -->
                     <div class="widget">
@@ -285,23 +220,43 @@
                         <div class="title-border"></div>
                         <!-- Meta Tag List Start -->
                         <div class="meta-tags">
-                            <span>Business</span>
-                            <span>Technology</span>
-                            <span>Corporate</span>
-                            <span>Web Design</span>
-                            <span>Development</span>
-                            <span>Graphic</span>
-                            <span>Digital Marketing</span>
-                            <span>SEO</span> 
-                            <span>Social Media</span>          
+
+                        <?php 
+
+                            $sql = "SELECT * FROM post";
+                            $latest_post = mysqli_query($db, $sql);
+
+                            while($row = mysqli_fetch_assoc($latest_post)){
+                                $id             = $row['id'];
+                                $title          = $row['title'];
+                                $description    = $row['description'];
+                                $image          = $row['image'];
+                                $category_id    = $row['category_id'];
+                                $author_id      = $row['author_id'];
+                                $status         = $row['status'];
+                                $tags           = $row['tags'];
+                                $post_date      = $row['post_date'];
+
+                                ?>
+                                    
+                                    <span><?php echo $tags ?></span>
+                                    
+                                <?php
+
+                            } 
+
+                        ?>
+         
                         </div>
                         <!-- Meta Tag List End -->
                     </div>
 
+
+                    <!-- Login card -->
                     <div class="widget" id="login">
                         <h4>Login</h4>
                         <div class="title-border"></div>
-                        <form action="login.php" method="POST">
+                        <form action="admin/dashboard.php" method="POST">
                                         <div class="form-group">
                                             <input type="email" name="email" placeholder="Your Email" class="form-input" autocomplete="off" required="required">
                                             <i class="fa fa-user-o"></i>
