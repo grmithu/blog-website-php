@@ -197,7 +197,7 @@
                                     </div>
                                     <!-- Comments Content -->
                                     <div class="col-md-8 no-padding">
-                                        <h5>admin on blog posts (pending task)</h5>
+                                        <h5>admin on blog posts </h5>
                                         <!-- Comments Date -->
                                         <ul>
                                             <li>
@@ -254,7 +254,7 @@
 
                     <!-- Login card -->
                     <div class="widget" id="login">
-                        <h4>Login</h4>
+                        <h4>Login (Admin Dashboard) </h4>
                         <div class="title-border"></div>
                         <form action="admin/dashboard.php" method="POST">
                                         <div class="form-group">
